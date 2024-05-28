@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import DatePickerComponent from "./components/datePickerComponent";
 import CustomCheckBox from "./components/checkbox";
 import ClickOutside from "./components/clickOutside";
+import LinearProgress from "./components/linearProgress";
 
 const uiData = [
   {
@@ -12,6 +13,9 @@ const uiData = [
   },
   {
     name: "click-outside",
+  },
+  {
+    name: "linear-progress",
   },
 ];
 
@@ -42,8 +46,10 @@ const UIComponents = ({ value }) => {
         return <DatePickerComponent />;
       case "custom-checkbox":
         return <CustomCheckBox />;
-        case "click-outside":
-          return <ClickOutside />;
+      case "click-outside":
+        return <ClickOutside />;
+      case "linear-progress-startTime-endTime":
+        return <LinearProgress />;
       default:
         return null;
     }
