@@ -3,56 +3,62 @@ import DatePickerComponent from "./components/datePickerComponent";
 import CustomCheckBox from "./components/checkbox";
 import ClickOutside from "./components/clickOutside";
 import LinearProgress from "./components/linearProgress";
+import DraggableComponent from "./components/draggable";
+import ResizeAndDraggable from "./components/resizeAndDraggable";
 
 const uiData = [
   {
     name: "date-picker",
+    Component: DatePickerComponent,
   },
   {
     name: "custom-checkbox",
+    Component: CustomCheckBox,
   },
   {
     name: "click-outside",
+    Component: ClickOutside,
   },
   {
     name: "linear-progress",
+    Component: LinearProgress,
+  },
+  {
+    name: "react-draggable",
+    Component: DraggableComponent,
+  },
+  {
+    name: "react-resize-draggable",
+    Component: ResizeAndDraggable,
   },
 ];
 
 const Main = () => {
-  const [value, setValue] = useState();
+  const [value, setValue] = useState("");
   return (
     <>
       <div className="">
-        {uiData.map(({ name }, index) => (
-          <button
-            key={index}
-            onClick={() => setValue(name)}
-            className="border-[red] border-[2px] p-2"
-          >
-            {name}
-          </button>
+        {uiData.map(({ name, Component }, index) => (
+          <div className="grid" key={index}>
+            <button
+              key={index}
+              onClick={() => setValue(name)}
+              className="border-[red] border-[2px] p-2"
+            >
+              {name}
+            </button>
+            {value === name && (
+              <div>
+                <Component />
+              </div>
+            )}
+          </div>
         ))}
       </div>
-      <UIComponents value={value} />
     </>
   );
 };
 
-const UIComponents = ({ value }) => {
-  return (() => {
-    switch (value) {
-      case "date-picker":
-        return <DatePickerComponent />;
-      case "custom-checkbox":
-        return <CustomCheckBox />;
-      case "click-outside":
-        return <ClickOutside />;
-      case "linear-progress-startTime-endTime":
-        return <LinearProgress />;
-      default:
-        return null;
-    }
-  })();
-};
+
+
 export default Main;
