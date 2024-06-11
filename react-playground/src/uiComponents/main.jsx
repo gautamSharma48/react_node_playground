@@ -5,6 +5,7 @@ import ClickOutside from "./components/clickOutside";
 import LinearProgress from "./components/linearProgress";
 import DraggableComponent from "./components/draggable";
 import ResizeAndDraggable from "./components/resizeAndDraggable";
+import NotificationButton from "./components/notificationButton";
 
 const uiData = [
   {
@@ -31,13 +32,17 @@ const uiData = [
     name: "react-resize-draggable",
     Component: ResizeAndDraggable,
   },
+  {
+    name: "notification-button",
+    Component: NotificationButton,
+  }
 ];
 
 const Main = () => {
   const [value, setValue] = useState("");
   return (
     <>
-      <div className="">
+      <div className="overflow-y-auto h-screen w-full">
         {uiData.map(({ name, Component }, index) => (
           <div className="grid" key={index}>
             <button

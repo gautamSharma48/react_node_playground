@@ -79,3 +79,69 @@
     border-width: 0 2px 2px 0;
     transform: rotate(35deg);
   }
+
+  .scroll-container {
+    width: 80%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Disable vertical scrolling */
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+    scrollbar-width: none; /* Hide scrollbar on Firefox */
+  }
+  
+  .scroll-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar on WebKit browsers */
+  }
+  
+  .scroll-content {
+    display: inline-flex;
+    transition: transform 0.3s ease;
+  }
+  
+  .item {
+    min-width: 200px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  
+  }
+
+  .bg-custom-image {
+    min-height: 688px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../public/rectangle@2x.png');
+    background-position: center;
+    max-width: 100%; /* Ensures the div does not stretch beyond the width of its container */
+    overflow: hidden; /* Prevents content from causing the div to stretch */
+    width: 100%; 
+  }
+  .bg-custom-black-image{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.60) 1.67%, rgba(0, 0, 0, 0.81) 74.96%, #000 83.1%);
+    opacity: 0.8;
+  }
+
+
+  .grid-template-row-min-content{
+    grid-template-rows: min-content;
+  }
+
+  .grid-auto-flow-colums{
+    grid-auto-flow: column;
+  }
+
+  .grid-auto-columns-10per{
+    grid-auto-columns: 10%;
+  }
+
+  .overflow-inline-behaviour-scroll{
+    overscroll-behavior-inline: contain;
+  }
+
+  .image-select-none{
+    user-select: none;
+    pointer-events: none;
+    -webkit-user-drag: none;
+  }

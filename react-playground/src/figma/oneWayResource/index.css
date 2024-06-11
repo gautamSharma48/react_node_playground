@@ -1,0 +1,7 @@
+
+
+@media screen and (max-width: 844px) and (orientation: landscape) {
+    .image {
+       display: none;
+    }
+}

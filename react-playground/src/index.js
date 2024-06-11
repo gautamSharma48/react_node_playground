@@ -17,6 +17,7 @@ import {
 import { history } from "./history";
 import Navigator from "./navigator.js";
 import "./index.css"
+import Figma from "./figma/index.jsx";
 
 const AuthContext = () => {
   const token = true;
@@ -33,6 +34,7 @@ const Router = () => {
       <Route path="/api-service-route" element={<ServiceRoute />} />
       <Route path="/graphs-route" element={<GraphsRoute />} />
       <Route path="/ui-route" element={<UIComponentsRoute />} />
+      <Route path="/figma" element={<Figma />} />
       <Route element={<AuthContext />}>
         <Route path="/" element={<Navigator />} />
       </Route>

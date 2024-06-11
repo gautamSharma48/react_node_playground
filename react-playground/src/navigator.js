@@ -14,6 +14,8 @@ const Navigator = () => {
         return history.push("/ui-route");
       case "animation":
         return history.push("/animation");
+        case "figma":
+          return history.push("/figma");
       default:
         return history.push("/");
     }
@@ -50,6 +52,12 @@ const Navigator = () => {
         onClick={() => pathChecker("animation")}
       >
         Animation
+      </button>
+      <button
+        className="border border-red-700 p-2"
+        onClick={() => pathChecker("figma")}
+      >
+        Figma
       </button>
     </div>
   );
