@@ -16,6 +16,8 @@ const Navigator = () => {
         return history.push("/animation");
         case "figma":
           return history.push("/figma");
+          case "dev-express":
+            return history.push("/dev-express");
       default:
         return history.push("/");
     }
@@ -58,6 +60,12 @@ const Navigator = () => {
         onClick={() => pathChecker("figma")}
       >
         Figma
+      </button>
+      <button
+        className="border border-red-700 p-2"
+        onClick={() => pathChecker("dev-express")}
+      >
+        Dev Express
       </button>
     </div>
   );

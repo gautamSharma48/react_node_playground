@@ -5,3 +5,82 @@
        display: none;
     }
 }
+
+
+
+.box {
+    pointer-events: none;
+    user-select: none;
+    height: 100%;
+    background-color: rgb(237, 241, 247);
+    border: 2px dashed rgb(148, 173, 209);
+    color: rgb(61, 95, 143);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    outline: none;
+    padding: 12px 12px 10px;
+    transition: all 300ms ease 0s;
+    width: 100%;
+    border-radius: 15px;
+    position: relative;
+    margin-top: 22px;
+
+  }
+  
+  .assigned-image-0{
+    position: absolute;
+    top: -20px;
+    left: 19px;
+  }
+  
+  .assigned-image-1 {
+    position: absolute;
+    top: -19px;
+    left: 89px;
+  }
+  
+  .assigned-image-2 {
+    position: absolute;
+    inset: 0;
+    top: -20px;
+    left: 25px;
+  }
+  
+  .assigned-image-3 {
+    position: absolute;
+    top: -19px;
+    left: 18px;
+  }
+
+  .shared-image-right{
+    position: absolute;
+    top: -20px;
+    left: 148px;
+  }
+
+  
+  .assigned-text {
+    font-size: 9px;
+    position: absolute;
+    inset: 0;
+    top: -17px;
+    left: 42px;
+    color: white;
+  }
+  
+  #checkmark {
+    width: 18px;
+    height: 18px;
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-linecap: round;
+    animation: draw 2s ease-in-out forwards;
+  }
+  
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }

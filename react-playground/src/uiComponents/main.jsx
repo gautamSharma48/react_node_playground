@@ -6,6 +6,8 @@ import LinearProgress from "./components/linearProgress";
 import DraggableComponent from "./components/draggable";
 import ResizeAndDraggable from "./components/resizeAndDraggable";
 import NotificationButton from "./components/notificationButton";
+import ChangeOrderWithDraggable from "./components/changeOrderWithDraggable";
+
 
 const uiData = [
   {
@@ -35,7 +37,12 @@ const uiData = [
   {
     name: "notification-button",
     Component: NotificationButton,
-  }
+  },
+  
+  {
+    name: "draggable-with-change-order",
+    Component: ChangeOrderWithDraggable,
+  },
 ];
 
 const Main = () => {

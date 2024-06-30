@@ -8,12 +8,6 @@ const socket = new Server(httpServer,{
 });
 
 
-const messageKeyData = () => {
-    return {
-        data: "hello"
-    }
-}
-
 socket.on("connection", (socket)=>{
 
     socket.emit("message","hello"); // create a socket event

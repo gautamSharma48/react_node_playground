@@ -145,3 +145,11 @@
     pointer-events: none;
     -webkit-user-drag: none;
   }
+
+  .rotate-90deg{
+    transform: rotate(90deg);
+  }
+
+  .transition{
+    transition: all 0.3s ease-in-out;
+  }
