@@ -18,6 +18,8 @@ const Navigator = () => {
           return history.push("/figma");
           case "dev-express":
             return history.push("/dev-express");
+            case "canva":
+            return history.push("/canva");
       default:
         return history.push("/");
     }
@@ -66,6 +68,12 @@ const Navigator = () => {
         onClick={() => pathChecker("dev-express")}
       >
         Dev Express
+      </button>
+      <button
+        className="border border-red-700 p-2"
+        onClick={() => pathChecker("canva")}
+      >
+        canva
       </button>
     </div>
   );

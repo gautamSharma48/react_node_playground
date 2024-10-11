@@ -1,18 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import App from "./src/App";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.scss";
 
-const App = () => {
-  const sendNotification = () => {
-    electron.notificationApi.sendMessage("Hi , there are some message");
-  };
 
-  return (
-    <div>
-      Hello world 123
-      <button onClick={sendNotification}>Test</button>
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("chatApp"));
 root.render(<App />);

@@ -19,6 +19,7 @@ import Navigator from "./navigator.js";
 import "./index.css"
 import Figma from "./figma/index.jsx";
 import DevExpress from "./devExpress/index.jsx";
+import Canva from "./canva/index.js";
 
 const AuthContext = () => {
   const token = true;
@@ -37,6 +38,7 @@ const Router = () => {
       <Route path="/ui-route" element={<UIComponentsRoute />} />
       <Route path="/figma" element={<Figma />} />
       <Route path="/dev-express" element={<DevExpress />} />
+      <Route path="/canva" element={<Canva />} />
       <Route element={<AuthContext />}>
         <Route path="/" element={<Navigator />} />
       </Route>

@@ -7,6 +7,7 @@ import DraggableComponent from "./components/draggable";
 import ResizeAndDraggable from "./components/resizeAndDraggable";
 import NotificationButton from "./components/notificationButton";
 import ChangeOrderWithDraggable from "./components/changeOrderWithDraggable";
+import NoiseMeter from "./components/noiseMeter";
 
 
 const uiData = [
@@ -42,6 +43,10 @@ const uiData = [
   {
     name: "draggable-with-change-order",
     Component: ChangeOrderWithDraggable,
+  },
+  {
+    name: "noise-meter",
+    Component: NoiseMeter,
   },
 ];
 
